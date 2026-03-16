@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -25,7 +25,4 @@ h1
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 300; 
-  height: auto;  
-  border:  1px solid black;
 }
