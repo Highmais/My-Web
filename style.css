@@ -29,3 +29,11 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+header
+{
+    text-align:left;
+    background: rgb(26, 18, 18);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
