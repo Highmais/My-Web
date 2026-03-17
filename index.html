@@ -15,16 +15,23 @@
 
     <div class="main-content">
         <div class = "container">
-            <label for="location">Choose a location:</label>
-            <select name="location" id="location">
-                <option value="location1" selected>Location 1</option>
-                <option value="location2">Location 2</option>
-                <option value="location3">Location 3</option>
-                <option value="location4">Location 4</option>
-            </select>
+            <form id="userForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    
+                <label for="location">Choose a location:</label>
+                <select name="location" id="location">
+                    <option value="location1" selected>Location 1</option>
+                    <option value="location2">Location 2</option>
+                    <option value="location3">Location 3</option>
+                    <option value="location4">Location 4</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
         <!--Anything else-->
-        
+
     </div>
     
     <script src="script.js"></script>
