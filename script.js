@@ -13,6 +13,8 @@ myForm.addEventListener('submit', function(event) {
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
+    //Send to google spreadsheet
     console.log("Form Data Collected:", data);
+    //alerts browser window
     alert(`Hello ${data.username} from ${data.location}!`);
 });
