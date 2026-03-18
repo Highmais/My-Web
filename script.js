@@ -6,6 +6,8 @@ button.addEventListener('click', () => {
     message.style.color = "green";
     console.log("The interactive button was pressed!");
 });*/
+var answers = []
+var locations = ["Backstretch","Barley Hopsters","Buns","Hamburger Inn","Oak and Brazen","Old Dog","Opa","Restoration","Roops","Solar Saloon","Son of Thurmans","Staas Brewing"]
 const myForm = document.getElementById('userForm');
 
 myForm.addEventListener('submit', function(event) {
@@ -18,3 +20,14 @@ myForm.addEventListener('submit', function(event) {
     //alerts browser window
     alert(`Hello ${data.username} from ${data.location}!`);
 });
+function doTheMath()
+{
+    //Splice string to just have number, based on what number location check if list[location] == answer
+    for(var i = 0;i < locations.length; i++)
+    {
+        if(i == Number(data.location.slice(8)))    
+        {
+            
+        }
+    }
+}
