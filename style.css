@@ -1,10 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #0e0e0e;
-    margin: 0;
+    margin: 1;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -20,24 +21,48 @@ header {
 }
 
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: green;
     margin: 10px 0;
 }
-
-.main-content {
-    flex-grow: 1;
+.main-content
+{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    font-size: large;
 }
-
-.container {
+.container-left {
+    flex: 1;
+    display: flex;
     text-align: center;
     flex-direction: column;
     background: rgb(24, 24, 24);
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 3rem 5rem;
+    border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
+    margin: 3%;
+}
+.container-right {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background: rgb(24, 24, 24);
+    padding: 3rem 5rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+input
+{
+    font-size:medium;
+    margin: 2%;
+    border-radius: 15px;
+}
+#submit
+{
+    height: fit-content;
+    width: 90px;
 }

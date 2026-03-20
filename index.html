@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Just a Website</title>
 </head>
+
 <body>
     <!--This is for the top bar of the website CREATE TRAVERSAL WESBITR SHAMROCK, send to a google spreadsheet user info, change domain-->
     <header>
         <img src="logo.png" alt="Shamrock logo" class="responsive-img" height="300" width="300">
         <h1>St. Paddy Pub Crawl</h1>
     </header>
-
     <div class="main-content">
-        <div class = "container">
+        <div class="container-left">
+            <h2>Info</h2>
             <form id="userForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                <input type="number" maxlength="30" id="answer" name="answer" placeholder="Enter your answer" required>
+                <label for="username">Full Name:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your full name" required><br></br>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required><br></br>
                 <label for="location">Choose a location:</label>
                 <select name="location" id="location" required>
-                    <!--Do not select anything-->
+                <!--Do not select anything-->
                     <option value="location0">Backstretch</option>
                     <option value="location1">Barley Hopsters</option>
                     <option value="location2">Buns</option>
@@ -35,14 +38,27 @@
                     <option value="location10">Son of Thurmans</option>
                     <option value="location11">Staas Brewing</option>
                 </select>
-
-                <input type="submit" value="Submit">
             </form>
         </div>
-        <!--Anything else-->
-
+        <div class="container-right">
+            <h2>Shamrocks</h2>
+            <ul class="input-field">
+                <!--Do not select anything-->
+                <input type ="text" maxlength="2" id="shamrock0" name="shamrock0" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock1" name="shamrock1" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock2" name="shamrock2" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock3" name="shamrock3" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock4" name="shamrock4" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock5" name="shamrock5" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock6" name="shamrock6" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock7" name="shamrock7" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock8" name="shamrock8" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="2" id="shamrock9" name="shamrock9" placeholder="Enter a Shamrock" required>
+            </ul>
+        </div>
+        <input id="submit" type="submit" value="Submit">
     </div>
-    
     <script src="script.js"></script>
 </body>
+
 </html>
