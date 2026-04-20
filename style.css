@@ -50,7 +50,7 @@ h1 {
     text-align: center;
     flex-direction: column;
     background: rgb(24, 24, 24);
-    padding: 3rem 5rem;
+    padding: 0rem 5rem;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
@@ -58,11 +58,17 @@ h1 {
 input
 {
     font-size:medium;
-    margin: 2%;
+    margin: 0%;
     border-radius: 15px;
+    width: 145px;
+    text-align: center;
 }
 #submit
 {
     height: fit-content;
     width: 90px;
+}
+h3
+{
+    margin:  0;
 }

@@ -11,7 +11,7 @@ var locations = ["Backstretch","Barley Hopsters","Buns","Hamburger Inn","Oak and
 var myForm = document.getElementById('userForm');
 var formData;
 var data;
-var inputValues
+var inputValues = []
 
 myForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -30,7 +30,7 @@ function doTheMath()
     //Splice string to just have number, based on what number location check if list[location] == answer
     for(var i = 0;i < locations.length; i++)
     {
-        for()
+        //for()
         if(i == Number(data.location.slice(8)))    
         {
             console.log(Number(data.location.slice(8)));

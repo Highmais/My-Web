@@ -21,8 +21,7 @@
                 <label for="username">Full Name:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your full name" required><br></br>
                 <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required><br></br>
-                <label for="location">Choose a location:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter a phone number" required><br></br>
                 <select name="location" id="location" required>
                 <!--Do not select anything-->
                     <option value="location0">Backstretch</option>
@@ -42,22 +41,23 @@
         </div>
         <div class="container-right">
             <h2>Shamrocks</h2>
+            <h3 id="location">location</h3>
             <ul class="input-field">
                 <!--Do not select anything-->
-                <input type ="text" maxlength="2" id="shamrock0" name="shamrock0" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock1" name="shamrock1" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock2" name="shamrock2" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock3" name="shamrock3" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock4" name="shamrock4" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock5" name="shamrock5" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock6" name="shamrock6" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock7" name="shamrock7" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock8" name="shamrock8" placeholder="Enter a Shamrock" required>
-                <input type ="text" maxlength="2" id="shamrock9" name="shamrock9" placeholder="Enter a Shamrock" required>
+                <input type ="text" maxlength="3" id="shamrock0" name="shamrock0" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock1" name="shamrock1" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock2" name="shamrock2" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock3" name="shamrock3" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock4" name="shamrock4" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock5" name="shamrock5" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock6" name="shamrock6" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock7" name="shamrock7" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock8" name="shamrock8" placeholder="Enter a Shamrock #" required>
+                <input type ="text" maxlength="3" id="shamrock9" name="shamrock9" placeholder="Enter a Shamrock #" required>
             </ul>
         </div>
-        <input id="submit" type="submit" value="Submit">
     </div>
+    <input id="submit" form="userForm"type="submit" value="Submit">
     <script src="script.js"></script>
 </body>
 
