@@ -38,11 +38,11 @@ h1 {
     text-align: center;
     flex-direction: column;
     background: rgb(24, 24, 24);
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
-    margin: 3%;
+    margin: 5%;
 }
 .container-right {
     flex: 1;
@@ -57,6 +57,7 @@ h1 {
 }
 input
 {
+    display: flex;
     font-size:medium;
     margin: 0%;
     border-radius: 15px;
@@ -71,4 +72,10 @@ input
 h3
 {
     margin:  0;
+}
+.input-field
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
 }
