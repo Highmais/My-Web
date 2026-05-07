@@ -11,7 +11,7 @@ var locations = ["Backstretch", "Barley Hopsters", "Buns", "Hamburger Inn", "Oak
 var myForm = document.getElementById('userForm');
 var formData;
 var data;
-var inputValues
+var inputValues = []
 
 myForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -27,28 +27,32 @@ myForm.addEventListener('submit', function (event) {
 });
 function doTheMath() {
     //Splice string to just have number, based on what number location check if list[location] == answer
-    for (var i = 0; i < locations.length; i++) {
-        for ()
-            if (i == Number(data.location.slice(8))) {
-                console.log(Number(data.location.slice(8)));
-                //change to numbers in any order
-                /*
-                if(data.answer.length == answer[i].length){
-                    var amt = 0;
-                    for(var o=0; 0 < data.answer[i].length;o++)
-                    {
-                        for(var p=0; p < answer[])
-                        {01
-    
-                        }
+    for(var i = 0;i < locations.length; i++)
+    {
+        //for()
+        if(i == Number(data.location.slice(8)))    
+        {
+            console.log(Number(data.location.slice(8)));
+            //change to numbers in any order
+            /*
+            if(data.answer.length == answer[i].length){
+                var amt = 0;
+                for(var o=0; 0 < data.answer[i].length;o++)
+                {
+                    for(var p=0; p < answer[])
+                    {01
+
                     }
-                }else
-                */
-                if (data.answer == answers[i]) {
-                    alert("Guess was correct!")
-                } else {
-                    alert("Answer was incorrect")
                 }
+            }else
+            */
+            if(data.answer == answers[i])
+            {
+                alert("Guess was correct!")
+            }else
+            {
+                alert("Answer was incorrect")
             }
+        }
     }
 }
