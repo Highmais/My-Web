@@ -6,14 +6,14 @@ button.addEventListener('click', () => {
     message.style.color = "green";
     console.log("The interactive button was pressed!");
 });*/
-const answers = [[1,13,15,7,9,10,2,8,14,11],[]]
-var locations = ["Backstretch","Barley Hopsters","Buns","Hamburger Inn","Oak and Brazen","Old Dog","Opa","Restoration","Roops","Solar Saloon","Son of Thurmans","Staas Brewing"]
+const answers = [[1, 13, 15, 7, 9, 10, 2, 8, 14, 11], []]
+var locations = ["Backstretch", "Barley Hopsters", "Buns", "Hamburger Inn", "Oak and Brazen", "Old Dog", "Opa", "Restoration", "Roops", "Solar Saloon", "Son of Thurmans", "Staas Brewing"]
 var myForm = document.getElementById('userForm');
 var formData;
 var data;
 var inputValues = []
 
-myForm.addEventListener('submit', function(event) {
+myForm.addEventListener('submit', function (event) {
     event.preventDefault();
     formData = new FormData(this);
     const inputElements = document.querySelectorAll('.input-field');
@@ -25,8 +25,7 @@ myForm.addEventListener('submit', function(event) {
     //alerts browser window
     doTheMath();
 });
-function doTheMath()
-{
+function doTheMath() {
     //Splice string to just have number, based on what number location check if list[location] == answer
     for(var i = 0;i < locations.length; i++)
     {

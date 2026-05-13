@@ -2,48 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Just a Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>St. Paddy Pub Crawl</title>
 </head>
 
 <body>
-    <!--This is for the top bar of the website CREATE TRAVERSAL WESBITR SHAMROCK, send to a google spreadsheet user info, change domain-->
-    <header>
-        <img src="logo.png" alt="Shamrock logo" class="responsive-img" height="300" width="300">
-        <h1>St. Paddy Pub Crawl</h1>
-    </header>
-    <div class="main-content">
-        <div class="container-left">
-            <h2>Info</h2>
-            <form id="userForm">
-                <label for="username">Full Name:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your full name" required><br></br>
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" name="phone" placeholder="Enter a phone #" required><br></br>
-            </form>
-        </div>
-        <div class="container-right">
-            <h2>Shamrocks</h2>
-            <h3 id="location">location</h3>
-            <ul class="input-field">
-                <!--Do not select anything-->
-                <input type ="text" maxlength="3" id="shamrock0" name="shamrock0" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock1" name="shamrock1" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock2" name="shamrock2" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock3" name="shamrock3" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock4" name="shamrock4" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock5" name="shamrock5" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock6" name="shamrock6" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock7" name="shamrock7" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock8" name="shamrock8" placeholder="Enter a Shamrock #" required>
-                <input type ="text" maxlength="3" id="shamrock9" name="shamrock9" placeholder="Enter a Shamrock #" required>
-            </ul>
-        </div>
-    </div>
-    <input id="submit" form="userForm"type="submit" value="Submit">
-    <script src="script.js"></script>
-</body>
 
+  <div class="clover-bg"></div>
+
+  <header>
+    <img src="logo.png" alt="St. Paddy Pub Crawl logo" class="logo">
+    <h1>St. Paddy Pub Crawl</h1>
+    <p class="tagline">Downtown Delaware &mdash; Find Your Shamrocks</p>
+  </header>
+
+  <div class="main-content">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🍺</span>
+        <h2>Your Info</h2>
+      </div>
+
+      <div class="field">
+        <label for="username">Full Name</label>
+        <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="field">
+        <label for="location">Starting Location</label>
+        <select name="location" id="location" required>
+          <option value="" disabled selected>Choose a bar…</option>
+          <option value="location0">Backstretch</option>
+          <option value="location1">Barley Hopsters</option>
+          <option value="location2">Buns</option>
+          <option value="location3">Hamburger Inn</option>
+          <option value="location4">Oak and Brazen</option>
+          <option value="location5">Old Dog</option>
+          <option value="location6">Opa</option>
+          <option value="location7">Restoration</option>
+          <option value="location8">Roops</option>
+          <option value="location9">Solar Saloon</option>
+          <option value="location10">Son of Thurmans</option>
+          <option value="location11">Staas Brewing</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🍀</span>
+        <h2>Shamrock Numbers</h2>
+      </div>
+      <p class="scroll-hint">Scroll to see all locations</p>
+      <div class="shamrock-scroll" id="shamrock-list"></div>
+    </div>
+
+  </div>
+
+  <div class="submit-row">
+    <button id="submit-btn" onclick="handleSubmit()">Submit &rarr;</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const locations = [
+      "Backstretch", "Barley Hopsters", "Buns", "Hamburger Inn",
+      "Oak and Brazen", "Old Dog", "Opa", "Restoration",
+      "Roops", "Solar Saloon", "Son of Thurmans", "Staas Brewing"
+    ];
+
+    const list = document.getElementById('shamrock-list');
+    locations.forEach((loc, i) => {
+      const row = document.createElement('div');
+      row.className = 'shamrock-row';
+      row.innerHTML = `
+        <span class="shamrock-icon">🍀</span>
+        <span class="loc-name">${loc}</span>
+        <input class="num-input" type="number" min="1" max="99" placeholder="#"
+          id="shamrock${i}" name="shamrock${i}" aria-label="Shamrock number for ${loc}">
+      `;
+      list.appendChild(row);
+    });
+
+    function handleSubmit() {
+      const name = document.getElementById('username').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const loc = document.getElementById('location').value;
+      if (!name || !phone || !loc) {
+        alert('Please fill in all your info fields.');
+        return;
+      }
+      const shamrocks = locations.map((l, i) => ({
+        location: l,
+        number: document.getElementById('shamrock' + i).value
+      })).filter(x => x.number);
+
+      console.log('Submitted:', { name, phone, loc, shamrocks });
+      // TODO: send to Google Sheets or your backend
+      alert('Submitted! 🍀 Enjoy the crawl!');
+    }
+  </script>
+
+</body>
 </html>
