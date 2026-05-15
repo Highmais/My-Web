@@ -20,7 +20,6 @@ for (let slot = 0; slot < 10; slot++) {
   const row = document.createElement('div');
   row.className = 'shamrock-row';
   row.innerHTML = `
-    <span class="shamrock-icon">🍀</span>
     <span class="loc-name">Number ${slot + 1}</span>
     <input class="num-input" type="number" min="0" max="120" placeholder="#"
       id="slot${slot}" aria-label="Shamrock number slot ${slot + 1}">
@@ -66,5 +65,5 @@ document.getElementById('submit-btn').addEventListener('click', function () {
   }));
 
   console.log('Submitted:', { name, phone, shamrocks: result });
-  alert('Submitted! 🍀 Enjoy the crawl!');
+  alert('Submitted! I hope you enjoyed.');
 });
